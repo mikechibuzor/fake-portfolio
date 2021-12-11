@@ -16,6 +16,7 @@ body {
     overflow-x: hidden;
 }
 #header {
+    background: #111;
     position: fixed;
     top: 0;
     right: 0;
@@ -316,8 +317,18 @@ svg path {
      height: 100vh;
  }
  #projects h3{
+     position: relative;
      text-align: center;
-     color: white;
+     color: white; 
+ }
+
+ #projects h3::before{
+     position: absolute;
+     content: '';     
+     background: white;
+     height: .15rem;
+     bottom: -.5rem;
+     width: 5%;
  }
 
 /* media queries responsiveness */
