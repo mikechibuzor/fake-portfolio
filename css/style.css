@@ -95,6 +95,7 @@ svg path {
     height: 2rem;
     cursor: pointer;
     transition: all .2s ease-in;
+    z-index: 500;
 }
 
 .burger {
@@ -296,6 +297,8 @@ svg path {
       width: 100%;
       height: 100%;
       animation: down-arrow .7s ease-in-out forwards alternate infinite;
+      z-index: -1;
+      position: relative;
   }
 
   @keyframes down-arrow {
@@ -325,6 +328,10 @@ svg path {
   #header #nav-bar .nav-links .nav-link{
     color: #111;
   }
+  #welcome{
+      justify-content: start;
+      padding-top: 30vh;
+  }
 
     a.nav-link::before {
         background: #111;
@@ -337,7 +344,7 @@ svg path {
         background: white;
         padding: 1rem 0rem;
         transition: all .3s ease;
-         width: 50%;
+         width: 45%;
          z-index: 30;
 
     }
