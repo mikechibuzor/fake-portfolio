@@ -15,6 +15,11 @@ body {
     monospace;
     overflow-x: hidden;
 }
+
+img{
+    height: 100%;
+    width: 100%;
+}
 #header {
     background: #111;
     position: fixed;
@@ -314,7 +319,13 @@ svg path {
  /* projects */
  #projects{
      padding: 4rem;
-     height: 100vh;
+     min-height: 100vh;
+ }
+
+ #projects .proj-container{
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     padding-top: 8vh;
  }
  #projects h3{
      position: relative;
@@ -329,6 +340,69 @@ svg path {
      height: .15rem;
      bottom: -.5rem;
      width: 5%;
+ }
+
+ .project-title {
+     position: relative;
+     min-width: 320px;
+     height: 440px;
+     box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+         inset -5px -5px 15px rgba(225, 225, 225, .1),
+         5px 5px 15px rgba(0, 0, 0, 0.3),
+         -5px -5px 15px rgba(225, 225, 225, 0.1);
+     border-radius: 15px;
+     margin: 30px;
+ }
+
+ .container .project-title .box {
+     position: absolute;
+     top: 20px;
+     left: 20px;
+     right: 20px;
+     cursor: pointer;
+     bottom: 20px;
+     background: #222;
+     border: 2px solid #1e1f23;
+     border-radius: 15px;
+     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+     transition: 0.5s;
+     z-index: 200;
+     overflow: hidden;
+ }
+
+ .container .project-title:hover .box {
+     transform: translateY(-25%);
+     box-shadow: 0 40px 50px rgba(0, 0, 0, 0.5);
+     background: #111;
+ }
+
+ #projects .text{
+     position: absolute;
+     bottom: 2rem;
+     z-index: 0;    
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     align-items: center;
+     justify-content: center;
+ }
+
+ #projects .text .cont{
+     background: white;
+     padding: .5rem 1rem;
+    border-radius: .25rem;
+ }
+
+ #projects .text .cont .links{
+     padding-top: .5rem;
+     display: flex;
+     justify-content: space-between;
+ }
+
+ #projects .text .cont .links a{
+     text-decoration: none;
+     color: #111;
+     font-size: 0.9rem;
  }
 
 /* media queries responsiveness */
@@ -427,4 +501,13 @@ svg path {
              opacity: 0;
          }
      }
+
+     /* #projects{
+         padding: 0rem;
+     } */
+
+      #projects .proj-container {
+          
+          grid-template-columns: 1fr;
+        }
 }
