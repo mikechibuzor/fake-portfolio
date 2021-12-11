@@ -24,9 +24,11 @@ function navToggler(event) {
 
 navToggleHandler();
 
-const hamburgerBtn = document.querySelector(".btnn");
+const hamburgerBtn = document.querySelector(".btn");
 const navBar = document.querySelector("#nav-bar");
 
 hamburgerBtn.addEventListener("click", () => {
-  navBar.classList.toggle("move");
+  hamburgerBtn.classList.toggle("open");
+  navBar.classList.toggle("out");
+  navBar.classList.toggle("in");
 });
