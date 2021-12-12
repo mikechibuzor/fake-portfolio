@@ -564,12 +564,24 @@ svg path {
         font-size: 1.3rem;
     }
 
-    #work-together {
-        font-size: .9rem;
+    #contact .cont h3{
+        font-size: 1.3rem;
     }
-
-    #contact{
-        flex-wrap:wrap;
+    #contact .cont h6{
+        font-size: .8rem;
+    }
+    .contact-links {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.5rem;
+    }
+    .contact-links svg{
+        height: .9rem;
+        width: .9rem;
+    }
+    .contact-links a {
+        font-size: .9rem;
     }
 
     footer{
