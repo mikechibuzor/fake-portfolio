@@ -464,10 +464,57 @@ svg path {
       color: white;
       font-style: italic;
       text-align: center;
-      font-size: 1.1rem;
+      font-size: .9rem;
       font-weight: 100;
       letter-spacing: .1rem;
-      margin-top: .5rem;
+      margin-top: .85rem;
+  }
+
+  .contact-links{
+      margin-top:4rem;
+      display: flex;
+  }
+
+  .contact-links a{
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: ceneter;
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      transition: all .15s linear;
+  }
+
+  .contact-links a:hover{
+      transform: translateY(.35rem);
+  }
+
+  .contact-links svg{
+    height: 1.4rem;
+    width: 1.4rem;
+    margin-right: .5rem;
+    fill: white;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+  }
+   .contact-links #mail,
+   .contact-links #call{
+       fill: none;
+   }
+  .contact-links svg path{
+      stroke: white;
+  }
+
+  footer{
+      padding: 2rem 6rem;
+      border-top: 2px solid white;
+      margin-top: 10vh;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
   }
 
 /* media queries responsiveness */
@@ -515,6 +562,24 @@ svg path {
     }
     h1{
         font-size: 1.3rem;
+    }
+
+    #work-together {
+        font-size: .9rem;
+    }
+
+    #contact{
+        flex-wrap:wrap;
+    }
+
+    footer{
+        padding: 2rem;
+        flex-direction: column;
+    }
+
+    footer p{
+        text-align: center;
+        margin-bottom: 3rem;
     }
 
     .down-arrow{
